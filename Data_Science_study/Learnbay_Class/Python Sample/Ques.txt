@@ -1,0 +1,10 @@
+#Write a Python program to find the list of words that are longer than or equal to 4 from a given string.
+#Input:- 'How much wood would a woodchuck chuck if a woodchuck could chuck wood'
+#Output:- ['much', 'wood', 'would', 'woodchuck', 'chuck', 'could']
+#Note:- Duplicate should be avoided. 
+
+
+
+#Write a Python program which takes a list of numbers as input and prints a new list after removing even numbers from it.
+#Input:- [10,21,22,98,87,45,33,1,2,100]
+#Output:- [21,87,45,33,1] 

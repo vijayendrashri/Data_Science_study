@@ -1,0 +1,14 @@
+1 . import all the important libraries
+2 . load the dataset using pandas
+3 . print first 5 and last 7 records
+4 . print total records and type of variables
+5 . Print the name of all the columns.
+6 . How is the dataset indexed?
+
+7 . Which was the most ordered item? and How many items were ordered?
+8 . What was the most ordered item in the choice_description column?
+
+9 . Turn the item price into a float
+10 . How much was the revenue for the period in the dataset?
+11 . print a data frame with only two columns item_name and item_price
+12 . What was the quantity of the most expensive item ordered?
