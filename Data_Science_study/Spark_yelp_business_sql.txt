@@ -1,0 +1,23 @@
+businessDF = spark.read.json("/home/vijay/Downloads/yelp_dataset/yelp_academic_dataset_business.json")
+businessDF.createOrReplaceTempView("biz")
+spark.sql('select count(1) as Business from biz ').show()
+spark.sql('select state, count(1) as Business from biz Group by state ').show()
+spark.sql('select state, count(1) as business from biz Group by state order by business desc ').show()
+spark.sql('select name,stars,review_count,city,state from biz where stars = 5.0 ').show()
+spark.sql('select name,stars,review_count,city,state from biz where name='NV' and stars = 5.0 ').show()
+spark.sql('select state,sum(review_count) as review from biz group by state ').show()
+spark.sql('select stars,count(1) as review from biz group by stars ').show()
+spark.sql('select state,avg(review_count) as avgreview from biz group by state').show()
+spark.sql('select state,round(avg(review_count)) as avgreview from biz group by state order by avgreview').show()
+spark.sql("select name,stars, review_count from biz where city='Las Vegas' order by stars desc, review_count desc").show()
+spark.sql("select * from biz where hours.wednesday = '7:0-15:0' ").show(20,False,True)
+
+
+=================================
+
+populer = (newBornDF.filter(newBornDF['year']==1980).
+filter(newBornDF['gender']=='F').
+orderBy(newBornDF['count'].desc(),newBornDF['name']).
+select("name").limit(5))
+
+
